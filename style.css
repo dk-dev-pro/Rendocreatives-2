@@ -1,0 +1,361 @@
+/*CSS RESET*/
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    background-color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/*Center the webpage*/
+.scrollMain {
+    margin: 0 200px;
+}
+
+/*Header*/
+
+.scrollHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    background-color: white;
+}
+
+.logo {
+    height: 75px;
+}
+
+.menuLink {
+    text-decoration: underline;
+}
+
+
+
+/*Main Content*/
+
+.heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 185px;
+    z-index: -1;
+}
+.heroImage {
+    height: 375px;
+}
+.heroImageContainer {
+    z-index: 1000;
+    margin-top: -1000px;
+    position: absolute;
+    animation: heroImageAnimation 1500ms forwards;
+}
+@keyframes heroImageAnimation {
+    to {
+        margin-top: 0;
+    }
+}
+
+.scrollTextWrapper {
+    animation: textPosition 1s forwards;
+    position: absolute;
+    z-index: -2;
+}
+
+.heroTxt {
+    white-space: nowrap;
+    font-size: 100px;
+    margin-top: 150px;
+    margin-left: 1000px;
+    animation: animationHeroTxt 15s linear infinite;
+}
+@keyframes animationHeroTxt {
+    to {
+        margin-left: -1000px;
+    }
+
+}
+@keyframes textPosition {
+    to {
+        margin-top: -100px;
+    }
+}
+
+.scrollDown {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.displayContainer1{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.displayContainer2{
+    display: flex;
+    align-items: start;
+}
+.displayContainer3{
+    display: flex;
+    align-items: end;
+}
+
+
+.display {
+    margin-top: 50px;
+    position: relative;
+    z-index: -1;
+}
+
+.p1 {
+    height: 300px;
+    z-index: 1000;
+}
+.p2 {
+    height: 400px;
+}
+
+.a1 {
+    height: 300px;
+}
+.a2 {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    margin-left: 25px;
+}
+.a3 {
+    height: 400px;
+    margin-left: 100px;
+}
+.a4 {
+    height: 400px;
+    margin-right: 135px;
+}
+.a5 {
+    height: 300px;
+    margin-right: 25px;
+}
+.a6 {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.imageCover1 {
+    height: 275px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    animation: reveal forwards;
+    animation-timeline: view();
+}
+.imageCover2 {
+    height: 275px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    animation: reveal forwards;
+    animation-timeline: view();
+}
+.imageCover3 {
+    height: 275px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    animation: reveal forwards;
+    animation-timeline: view();
+}
+.imageCover4 {
+    height: 275px;
+    width: 325px;
+    background-color: white;
+    position: absolute;
+    animation: reveal forwards;
+    animation-timeline: view();
+}
+.imageCover5 {
+    height: 275px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    animation: reveal forwards;
+    animation-timeline: view();
+}
+.imageCover6 {
+    height: 275px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    animation: reveal forwards;
+    animation-timeline: view();
+}
+.imageCover7 {
+    height: 275px;
+    width: 325px;
+    background-color: white;
+    position: absolute;
+    animation: reveal forwards;
+    animation-timeline: view();
+}
+.imageCover8 {
+    height: 275px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    animation: reveal forwards;
+    animation-timeline: view();
+}
+
+@keyframes reveal {
+    to {
+        transform: translateY(-250px);
+    }
+}
+
+.articleSection {
+    display: flex;
+    margin-top: 175px;
+    justify-content: space-between;
+    align-items: start;
+}
+.a1 {
+    font-size: 35px;
+}
+.a2 {
+    font-size: 17px;
+}
+.menuLink2 {
+    margin-top: 50px;
+}
+
+.motiveSection {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.ms1{
+    margin-top: -50px;
+}
+
+.ms2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    gap: 100px;
+}
+.tc, .tc2{
+    display: flex;
+    margin-top: 50px;
+    opacity: 0;
+    animation: motiveAnimation linear forwards;
+    animation-timeline: view();
+}
+
+@keyframes motiveAnimation {
+    50% {
+        opacity:1;
+        margin-top: -50px;
+    }
+}
+
+.eachContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.i {
+    height: 100px;
+}
+
+.im {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1000ms;
+    margin-top: 100px;
+}
+.chr {
+    white-space: nowrap;
+}
+
+.im1{
+    margin-left: -50px;
+}
+.im2{
+    margin-right: -50px;
+}
+.im3{
+    margin-left: 50px;
+    margin-right: -50px;
+}
+.im4{
+    margin-right: -50px;
+}
+.im5{
+    margin-left: -50px;
+}
+.im6{
+    margin-right: -50px;
+}
+
+.eachContainer1:hover .im1,
+.eachContainer2:hover .im2,
+.eachContainer3:hover .im3,
+.eachContainer4:hover .im4,
+.eachContainer5:hover .im5,
+.eachContainer6:hover .im6
+{
+    opacity: 1;
+    margin: 0 0 50px 0;
+}
+
+.articleSection2 {
+    margin-top: 300px;
+}
+
+/*Footer*/
+.scrollFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 250px;
+    margin-bottom: 50px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 18px;
+}
+.extra {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+}
